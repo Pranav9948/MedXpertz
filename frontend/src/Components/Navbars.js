@@ -26,9 +26,9 @@ function Navbars() {
   const dispatch = useDispatch();
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" >
       <Container>
-        <Navbar.Brand  style={{marginRight:'100px'}}>
+        <Navbar.Brand  style={{marginRight:'100px',fontSize:'10px'}}>
         <Link to='/' style={{ textDecoration: 'none' }}> <img src={doctorLogo} title="logo" className="logoImg" /></Link>
         </Navbar.Brand>
 
@@ -37,9 +37,9 @@ function Navbars() {
           <Nav className="me-auto" >
            
 
-            <NavDropdown title="Appointments" id="basic-nav-dropdown"  >
+            <NavDropdown title="Appointments" id="basic-nav-dropdown" style={{fontSize:'15px'}}  >
               <NavDropdown.Item>
-                <Link to={"/view-appointments"} style={{ textDecoration: 'none' }}>view your appointments </Link>
+                <Link to={"/view-appointments"} style={{ textDecoration: 'none'}}>view your appointments </Link>
               </NavDropdown.Item>
              
             </NavDropdown>
@@ -75,11 +75,11 @@ function Navbars() {
 
 
 
-            <Nav.Link className="d-flex ">
+            <Nav.Link className="d-flex " style={{marginTop:'-10px'}}>
               {" "}
               
                <div>
-                <i className="ri-notification-line header-action-icon px-1"></i>{" "}
+                <i   className="ri-notification-line header-action-icon px-1"></i>{" "}
                 </div>
 
                 <div>
@@ -87,6 +87,7 @@ function Navbars() {
                   count={userInfo?.unseenNotifications?.length}
                   onClick={() => navigate("/your-notifications")}
                   className="bg-success"
+                
                 >
                   {userInfo?.unseenNotifications?.length}
                 </Badge>
