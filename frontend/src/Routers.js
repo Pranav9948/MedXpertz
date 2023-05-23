@@ -39,9 +39,9 @@ function Routers() {
       <Route
         path="/"
         element={
-         
+          <ProtectedRoutes>
             <HomePage />  
-        
+          </ProtectedRoutes>
         }
       />
       <Route
@@ -68,17 +68,17 @@ function Routers() {
       <Route
         path="/layout"
         element={
-          
+          <ProtectedRoutes>
             <Layout />
-          
+          </ProtectedRoutes>
         }
       />
       <Route
         path="/applyfordoctor"
         element={
-         
+          <ProtectedRoutes>
             <ApplyAsDoctor />
-          
+          </ProtectedRoutes>
         }
       />
 
@@ -88,9 +88,9 @@ function Routers() {
 <Route
         path="/search-results"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
            <SearchUsers />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -100,9 +100,9 @@ function Routers() {
       <Route
         path="/successapplyfordoctor"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <SuccessApplyDoctor />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -113,9 +113,9 @@ function Routers() {
 <Route
         path="/myprofile"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <UserProfile />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -124,9 +124,9 @@ function Routers() {
       <Route
         path="/view-appointments"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <ViewAppointments />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -140,9 +140,9 @@ function Routers() {
       <Route
         path="/viewOurDoctors"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <ViewOurDoctors />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -153,9 +153,9 @@ function Routers() {
        <Route
         path="/your-notifications"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <UserNotifications/>
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -166,9 +166,9 @@ function Routers() {
 <Route
         path="/bookDoctorAppointment/:doctorId"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <BookDoctorAppointment/>
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -204,9 +204,9 @@ AdminRoutes */}
       <Route
         path="/notifications"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <Notifications />
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
 
@@ -215,17 +215,17 @@ AdminRoutes */}
       <Route
         path="/adminHome"
         element={
-          // <AdminProtectedRoutes>
+          <AdminProtectedRoutes>
             <LayoutAdmin />
-          // </AdminProtectedRoutes>
+          </AdminProtectedRoutes>
         }
       />
       <Route
         path="/admin/userslist"
         element={
-          // <AdminProtectedRoutes>
+          <AdminProtectedRoutes>
             <ShowAllUsers />
-          // </AdminProtectedRoutes>
+          </AdminProtectedRoutes>
         }
       />
      
@@ -233,9 +233,9 @@ AdminRoutes */}
      <Route
         path="/admin/doctorslist"
         element={
-          // <AdminProtectedRoutes>
+          <AdminProtectedRoutes>
             <AdminViewDoctors />
-          // </AdminProtectedRoutes>
+          </AdminProtectedRoutes>
         }
       />
 
@@ -247,18 +247,18 @@ AdminRoutes */}
       <Route
         path="/editusers/:id"
         element={
-          // <AdminProtectedRoutes>
+          <AdminProtectedRoutes>
             <EditUsers />
-          // </AdminProtectedRoutes>
+          </AdminProtectedRoutes>
         }
       />
 
       <Route
         path="/detailedDoctorsVerifyPage/:doctorId"
         element={
-          // <AdminProtectedRoutes>
+          <AdminProtectedRoutes>
             <DetailedDoctorverify />
-          // </AdminProtectedRoutes>
+          </AdminProtectedRoutes>
         }
       />
 
@@ -267,18 +267,18 @@ AdminRoutes */}
       <Route
         path="/doctorhome"
         element={
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <DoctorsHomePage />
-          // </DoctorProtectedRoutes>
+          </DoctorProtectedRoutes>
         }
       />
 
 <Route
         path="/yourblogs"
         element={
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <ListBlogs />
-          // </DoctorProtectedRoutes>
+          </DoctorProtectedRoutes>
         }
       />
 
@@ -288,9 +288,9 @@ AdminRoutes */}
 <Route
         path="/editblog/:blogId"
         element={
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <EditBlogs/>
-          // </DoctorProtectedRoutes>
+          </DoctorProtectedRoutes>
         }
       />
 
@@ -300,9 +300,9 @@ AdminRoutes */}
         path="/createhealthblogs"
         element={
         
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <DoctorBlogz/>
-            // </DoctorProtectedRoutes>
+            </DoctorProtectedRoutes>
          
         }
       />
@@ -315,9 +315,9 @@ AdminRoutes */}
 <Route
         path="/viewDoctorAppointments"
         element={
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <ViewDoctorAppointment />
-            // </DoctorProtectedRoutes>
+            </DoctorProtectedRoutes>
         }
       />
 
@@ -331,9 +331,9 @@ AdminRoutes */}
       <Route
         path="/doctor/profile/:userId"
         element={
-          // <DoctorProtectedRoutes>
+          <DoctorProtectedRoutes>
             <Profile />
-            // </DoctorProtectedRoutes>
+            </DoctorProtectedRoutes>
          
         }
       />

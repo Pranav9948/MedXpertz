@@ -48,7 +48,7 @@ function HomePage() {
       <DoctorCard />
       <Mobile7App />
       <Health7Blog />
-      {/* <Chat6Screen /> */}
+      <Chat6Screen />
       <Health8Blog />
       <Footers />
     </>

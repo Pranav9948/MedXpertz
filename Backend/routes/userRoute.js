@@ -31,7 +31,7 @@ router.post("/register",registration)
 
 router.post('/login',loginDetails)
 
-router.post("/getUserInfoById",authmiddleware,getUserInfoById);
+router.post("/getUserInfoById",getUserInfoById);
 
 
 
@@ -39,31 +39,31 @@ router.post("/getUserInfoById",authmiddleware,getUserInfoById);
 
 router.post("/apply-doctor-account",applyForDoctorAccount);
 
-router.post("/mark-all-notifications-as-seen",authMiddleware,markAllAsSeen);
+router.post("/mark-all-notifications-as-seen",markAllAsSeen);
   
-router.post("/delete-all-notifications", authMiddleware,deleteAllNotifications);
+router.post("/delete-all-notifications",deleteAllNotifications);
 
-router.get("/getAllApprovedDoctors",authMiddleware,getApprovedDoctorsList)
+router.get("/getAllApprovedDoctors",getApprovedDoctorsList)
 
-router.post("/book-appointment",authMiddleware,BookAppointmentz)
+router.post("/book-appointment",BookAppointmentz)
 
-router.post("/onlinebook-appointment",authMiddleware,onlineBookAppointmentz)
+router.post("/onlinebook-appointment",onlineBookAppointmentz)
 
-router.post("/check-booking-avilability",authMiddleware,checkAvailiabilty)
+router.post("/check-booking-avilability",checkAvailiabilty)
 
-router.get("/get-appointments-by-user-id",authMiddleware,getUserAppointments); 
+router.get("/get-appointments-by-user-id",getUserAppointments); 
 
-router.get("/get-user-profile",authMiddleware,getUserProfile);
+router.get("/get-user-profile",getUserProfile);
 
-router.patch("/update-user-profile",authMiddleware,updateUserProfile);
+router.patch("/update-user-profile",updateUserProfile);
 
-router.post("/search-doctors",authMiddleware,searchDoctors);
+router.post("/search-doctors",searchDoctors);
 
 router.get("/getblogs",getBlogs);
 
 router.get("/getdetailedblog/:blogId",getDetailedBlogs);
 
-router.delete('/cancelappointment',authMiddleware,cancelAppointment)
+router.delete('/cancelappointment',cancelAppointment)
 
 
 

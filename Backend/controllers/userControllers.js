@@ -15,6 +15,8 @@ const notes=require('../models/noteModel')
 // const Appointments = require("../models/appointmentModel");
 ;
 
+const JWT_SECRET_KEY='Pro123'
+
 const registration = async (req, res) => {
   try {
 
@@ -77,9 +79,9 @@ try {
       } else if (User.isBlocked === true) {
         res.status(200).send({ message: "user Blocked...", success: false });
       } else {
-        console.log("234", process.env.JWT_SECRET_KEY);
+        console.log("234",JWT_SECRET_KEY);
 
-        const token = jwt.sign({ userId: User._id }, process.env.JWT_SECRET_KEY, {
+        const token = jwt.sign({ userId: User._id },JWT_SECRET_KEY, {
           expiresIn: "2D",
         });
 

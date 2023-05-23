@@ -26,26 +26,26 @@ const doctorAuthMiddleware = require("../Middleware/doctorAuthMiddleware");
 
 
 
-router.post("/get-doctor-info-by-user-id",doctorAuthMiddleware,getDoctorInfoById);
+router.post("/get-doctor-info-by-user-id",getDoctorInfoById);
 
-router.post("/get-doctor-info-by-id",authmiddleware,getDoctorDetails);
+router.post("/get-doctor-info-by-id",getDoctorDetails);
 
-router.patch("/update-doctor-profile",doctorAuthMiddleware,updateDoctorProfile);
+router.patch("/update-doctor-profile",updateDoctorProfile);
 
 
-router.get("/get-appointments-by-doctor-id",doctorAuthMiddleware,getAppointmentOfDoctor );
+router.get("/get-appointments-by-doctor-id",getAppointmentOfDoctor );
 
-router.get("/getdoctorblog",doctorAuthMiddleware,getDoctorBlogs );
+router.get("/getdoctorblog",getDoctorBlogs );
   
-router.post("/change-appointment-status",doctorAuthMiddleware,changeAppointmentStatus);
+router.post("/change-appointment-status",changeAppointmentStatus);
 
  
-router.post("/create",doctorAuthMiddleware,createBlogs); 
+router.post("/create",createBlogs); 
   
-router.put("/editBlog/:blogId",doctorAuthMiddleware,editDoctorBlogs);
+router.put("/editBlog/:blogId",editDoctorBlogs);
 
   
-router.delete("/deleteBlog/:blogId",doctorAuthMiddleware,DeleteNote);
+router.delete("/deleteBlog/:blogId",DeleteNote);
 
 
 
