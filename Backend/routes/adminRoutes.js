@@ -15,25 +15,25 @@ const {
   RejectDoctorAccount,
 } = require("../controllers/adminControllers");
 
-router.get("/showUserList",adminAuthMiddleware,showalluserz)
+router.get("/showUserList",showalluserz)
 
-router.get("/users/:userId", adminAuthMiddleware, getUserDetails);
+router.get("/users/:userId", getUserDetails);
 
-router.patch("/updateUser/:userId", adminAuthMiddleware, updateUserz);
+router.patch("/updateUser/:userId", updateUserz);
 
-router.delete("/deleteUsers/:userId", adminAuthMiddleware, deleteUserz);
+router.delete("/deleteUsers/:userId", deleteUserz);
 
-router.patch("/block/:id",adminAuthMiddleware,blockUser);
+router.patch("/block/:id",blockUser);
 
-router.patch("/unblock/:id", adminAuthMiddleware,unblockUser);
+router.patch("/unblock/:id",unblockUser);
 
-router.get("/viewAllDoctors",adminAuthMiddleware,adminViewAllDoctors);
+router.get("/viewAllDoctors",adminViewAllDoctors);
 
-router.get("/detailedDoctorsVerifyPage/:doctorId",adminAuthMiddleware,detailedDoctorVerify);
+router.get("/detailedDoctorsVerifyPage/:doctorId",detailedDoctorVerify);
 
 router.patch("/approveDoctorAccount/:doctorId",approveDoctorRequest);
 
-router.delete("/RejectDoctorAccount/:doctorId",adminAuthMiddleware,RejectDoctorAccount) 
+router.delete("/RejectDoctorAccount/:doctorId",RejectDoctorAccount) 
 
 
 
